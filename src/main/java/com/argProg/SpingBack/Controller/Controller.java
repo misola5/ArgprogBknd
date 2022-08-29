@@ -69,11 +69,14 @@ public class Controller {
     public void crearEstudio(@RequestBody estudio est){
         estuServ.crearEstudio(est);
     }
+    
+    
     @GetMapping("/verEstudio/{idEstudio}")
     @ResponseBody
     public estudio verEstudio(@PathVariable Long idEstudio){
         return estuServ.verEstudio(idEstudio);
     }
+    @PreAuthorize ("permitAll()")
     @GetMapping("/verListaEstudio")
     @ResponseBody
     public List <estudio> verListaEstudio(){
@@ -101,6 +104,7 @@ public class Controller {
     public experiencia verEperiencia(@PathVariable Long idExperiencia){
        return expeServ.verExperiencia(idExperiencia);
     }
+    @PreAuthorize ("permitAll()")
     @GetMapping("/verListaExperiencia")
     @ResponseBody
     public List <experiencia> verListaExperiencia(){
