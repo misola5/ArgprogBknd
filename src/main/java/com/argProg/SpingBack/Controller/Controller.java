@@ -76,9 +76,8 @@ public class Controller {
     public estudio verEstudio(@PathVariable Long idEstudio){
         return estuServ.verEstudio(idEstudio);
     }
-    
-    @GetMapping("/verListaEstudio")
     @CrossOrigin(origins = "https://frontendargprog.web.app/")
+    @GetMapping("/verListaEstudio")   
     @ResponseBody
     public List <estudio> verListaEstudio(){
         return estuServ.verListaEstudio();
@@ -105,9 +104,8 @@ public class Controller {
     public experiencia verEperiencia(@PathVariable Long idExperiencia){
        return expeServ.verExperiencia(idExperiencia);
     }
-    
-    @GetMapping("/verListaExperiencia")
     @CrossOrigin(origins = "https://frontendargprog.web.app/")
+    @GetMapping("/verListaExperiencia")   
     @ResponseBody
     public List <experiencia> verListaExperiencia(){
         return expeServ.verListaExperiencia();
