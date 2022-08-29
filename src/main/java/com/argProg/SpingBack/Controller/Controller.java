@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Marcelo
  */
 @RestController
-@CrossOrigin(origins = "https://frontendargprog.web.app")
+@CrossOrigin(origins = "/**")
 public class Controller {
     
     @Autowired
