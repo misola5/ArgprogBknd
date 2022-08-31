@@ -18,7 +18,7 @@ public class SpingBackApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://frontendargprog.web.app").allowedMethods("GET").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins("https://frontendargprog.web.app").allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}
