@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Marcelo
  */
 @RestController
-@CrossOrigin(origins = "https://frontendargprog.web.app/")
+//@CrossOrigin(origins = "https://frontendargprog.web.app/")
 public class Controller {
     
     @Autowired
@@ -76,7 +76,7 @@ public class Controller {
     public estudio verEstudio(@PathVariable Long idEstudio){
         return estuServ.verEstudio(idEstudio);
     }
-    @CrossOrigin(origins = "https://frontendargprog.web.app/")
+    //@CrossOrigin(origins = "https://frontendargprog.web.app/")
     @GetMapping("/verListaEstudio")   
     @ResponseBody
     public List <estudio> verListaEstudio(){
@@ -104,7 +104,7 @@ public class Controller {
     public experiencia verEperiencia(@PathVariable Long idExperiencia){
        return expeServ.verExperiencia(idExperiencia);
     }
-    @CrossOrigin(origins = "https://frontendargprog.web.app/")
+    //@CrossOrigin(origins = "https://frontendargprog.web.app/")
     @GetMapping("/verListaExperiencia")   
     @ResponseBody
     public List <experiencia> verListaExperiencia(){
