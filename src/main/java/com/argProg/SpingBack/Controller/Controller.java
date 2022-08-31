@@ -4,10 +4,10 @@
  */
 package com.argProg.SpingBack.Controller;
 
-import com.argProg.SpingBack.Model.estudio;
+//import com.argProg.SpingBack.Model.estudio;
 import com.argProg.SpingBack.Model.experiencia;
 import com.argProg.SpingBack.Model.persona;
-import com.argProg.SpingBack.Service.IEstudioService;
+//import com.argProg.SpingBack.Service.IEstudioService;
 import com.argProg.SpingBack.Service.IExperienciaService;
 import com.argProg.SpingBack.Service.IPersonaService;
 import java.util.List;
@@ -33,8 +33,8 @@ public class Controller {
     
     @Autowired
     public IPersonaService persoServ;
-    @Autowired
-    public IEstudioService estuServ;
+//    @Autowired
+//    public IEstudioService estuServ;
     @Autowired
     public IExperienciaService expeServ;
     
@@ -64,35 +64,35 @@ public class Controller {
     }
     
     //Estudios
-    @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/crearEstudio")
-    public void crearEstudio(@RequestBody estudio est){
-        estuServ.crearEstudio(est);
-    }
-    
-    
-    @GetMapping("/verEstudio/{idEstudio}")
-    @ResponseBody
-    public estudio verEstudio(@PathVariable Long idEstudio){
-        return estuServ.verEstudio(idEstudio);
-    }
-    @CrossOrigin(origins = "https://frontendargprog.web.app")
-    @GetMapping("/verListaEstudio")   
-    @ResponseBody
-    public List <estudio> verListaEstudio(){
-        return estuServ.verListaEstudio();
-    }
-    @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/updateEstudio")
-    public void updateEstudio(@RequestBody estudio est){
-        estuServ.updateEstudio(est);
-    }
-    @PreAuthorize("hasRole('ADMIN')")
-    @DeleteMapping("/deleteEstudio/{idEstudio}")
-    public void deleteEstudio(@PathVariable Long idEstudio){
-        estuServ.deleteEstudio(idEstudio);
-    }
-    
+//    @PreAuthorize("hasRole('ADMIN')")
+//    @PostMapping("/crearEstudio")
+//    public void crearEstudio(@RequestBody estudio est){
+//        estuServ.crearEstudio(est);
+//    }
+//    
+//    
+//    @GetMapping("/verEstudio/{idEstudio}")
+//    @ResponseBody
+//    public estudio verEstudio(@PathVariable Long idEstudio){
+//        return estuServ.verEstudio(idEstudio);
+//    }
+//    @CrossOrigin(origins = "https://frontendargprog.web.app")
+//    @GetMapping("/verListaEstudio")   
+//    @ResponseBody
+//    public List <estudio> verListaEstudio(){
+//        return estuServ.verListaEstudio();
+//    }
+//    @PreAuthorize("hasRole('ADMIN')")
+//    @PostMapping("/updateEstudio")
+//    public void updateEstudio(@RequestBody estudio est){
+//        estuServ.updateEstudio(est);
+//    }
+//    @PreAuthorize("hasRole('ADMIN')")
+//    @DeleteMapping("/deleteEstudio/{idEstudio}")
+//    public void deleteEstudio(@PathVariable Long idEstudio){
+//        estuServ.deleteEstudio(idEstudio);
+//    }
+//    
     //Experiencia
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping ("/crearExperiencia")
